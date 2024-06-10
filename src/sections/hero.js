@@ -2,6 +2,8 @@ import batman480 from '../images/batman_480.jpg';
 import batman576 from '../images/batman_576.jpg';
 
 const Hero = () => {
+  const heroContainer = document.createElement('section');
+  heroContainer.classList.add('hero_section');
   const imgContainer = document.createElement('div');
   imgContainer.classList.add('hero_container');
   const img = document.createElement('img');
@@ -31,8 +33,9 @@ const Hero = () => {
   aboutMe.appendChild(aboutMeText);
   imgContainer.appendChild(img);
   imgContainer.appendChild(heading);
-  imgContainer.appendChild(aboutMe);
-  return imgContainer;
+  heroContainer.appendChild(imgContainer);
+  heroContainer.appendChild(aboutMe);
+  return heroContainer;
 };
 
 export default Hero;
