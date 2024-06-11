@@ -73,6 +73,48 @@ body {
   padding: 2rem;
 }
 
+.villains{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.villains_section{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.villain_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  gap: 1rem;
+  color: var(--secondary-text-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.villain_card img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.villain_card h2{
+  text-align: center;
+  margin: 0;
+}
+
+.villain_card p{
+  text-align: center;
+  padding: 0 1rem;
+}
+
 @keyframes flyInFromTop {
   0% {
     transform: translateY(-100%) scale(0.5);
