@@ -4,8 +4,8 @@ import batman1160 from '../images/batman_1160.jpg';
 
 const Hero = () => {
   const backgroundContainer = document.createElement('div');
-  const heroContainer = document.createElement('section');
-  const imgContainer = document.createElement('div');
+  const heroSection = document.createElement('section');
+  const heroContainer = document.createElement('div');
   const img = document.createElement('img');
   const heading = document.createElement('h1');
   const aboutMe = document.createElement('div');
@@ -17,8 +17,8 @@ const Hero = () => {
   const iconGitHub = document.createElement('i');
 
   backgroundContainer.classList.add('background_container');
-  heroContainer.classList.add('hero_section');
-  imgContainer.classList.add('hero_container');
+  heroSection.classList.add('hero_section');
+  heroContainer.classList.add('hero_container');
   img.classList.add('hero_img');
   heading.classList.add('hero_heading');
   aboutMe.classList.add('hero_about_me');
@@ -36,15 +36,15 @@ const Hero = () => {
     ${batman1160} 1160w
   `;
   img.sizes = `
-    (max-width: 980px) 90vw,
+    (max-width: 980px) 80vw,
     (max-width: 1200px) 70vw,
-    40vw
+    30vw
   `;
   img.alt = 'Batman standing on a rooftop';
   heading.textContent = 'I am Batman';
   aboutMeHeading.textContent = 'About Me';
-  aboutMeText.innerHTML = `My mission is to protect the innocent and bring justice to those who believe they are above the law. Trained to the peak of human potential, I have mastered martial arts, detective work, and the art of stealth. I work from the shadows, striking fear into the hearts of those who prey on the weak.<br>
-  Allies in this mission are few, but those who join me share an unwavering commitment to justice. Trust is earned and seldom given, but when it is, it becomes a powerful bond. I fight not for glory or recognition, but for the hope that someday, Gotham can rise from its darkness.<br>
+  aboutMeText.innerHTML = `My mission is to protect the innocent and bring justice to those who believe they are above the law. <br>
+  I fight not for glory or recognition, but for the hope that someday, Gotham can rise from its darkness.<br>
   The night is my ally, and fear is my weapon. I am relentless, vigilant, and always watching.<br> 
   I am vengeance. I am the night. I am Batman.`;
   aboutMeIcons.appendChild(iconX);
@@ -53,12 +53,12 @@ const Hero = () => {
   aboutMe.appendChild(aboutMeHeading);
   aboutMe.appendChild(aboutMeText);
   aboutMe.appendChild(aboutMeIcons);
-  imgContainer.appendChild(img);
-  imgContainer.appendChild(heading);
   heroContainer.appendChild(backgroundContainer);
-  heroContainer.appendChild(imgContainer);
+  heroContainer.appendChild(heading);
+  heroContainer.appendChild(img);
   heroContainer.appendChild(aboutMe);
-  return heroContainer;
+  heroSection.appendChild(heroContainer);
+  return heroSection;
 };
 
 export default Hero;
